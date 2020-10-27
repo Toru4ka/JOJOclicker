@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: 5eb4e8ef448e5cd439fb891fe12f8789
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_0"
+  - first:
+      213: 21300002
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_1"
+  - first:
+      213: 21300004
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_2"
+  - first:
+      213: 21300006
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_3"
+  - first:
+      213: 21300008
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_4"
+  - first:
+      213: 21300010
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_5"
+  - first:
+      213: 21300012
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_6"
+  - first:
+      213: 21300014
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_7"
+  - first:
+      213: 21300016
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_8"
+  - first:
+      213: 21300018
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_9"
+  - first:
+      213: 21300020
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_10"
+  - first:
+      213: 21300022
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_11"
+  - first:
+      213: 21300024
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_12"
+  - first:
+      213: 21300026
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_13"
+  - first:
+      213: 21300028
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_14"
+  - first:
+      213: 21300030
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_15"
+  - first:
+      213: 21300032
+    second: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_16"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_0"
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 189
+        width: 244
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26143db8b33c1d74384609cb893c4933
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_1"
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 207
+        width: 301
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daafd8af2a655ef4392ab2cabf974576
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_2"
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 180
+        width: 321
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873163bd18744974085938be5f94ed3e
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_3"
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 165
+        width: 447
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d4a6f51fa5d464da929487161b7434
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_4"
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 165
+        width: 425
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b96de3f47a30b46bea555ecde587e7
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_5"
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 666
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad5daf5318fe3f4fa5693ec0b63a617
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_6"
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 141
+        width: 375
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1495af285c882dc4981ce9de47234b73
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_7"
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 160
+        width: 273
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f056e1e23ce36438e9e458afb81819
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_8"
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 204
+        width: 273
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a610e2751adfb44f8a5fa2399de9f22
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_9"
+      rect:
+        serializedVersion: 2
+        x: 3654
+        y: 208
+        width: 321
+        height: 546
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd6b61c8c5d9a84c8ee7888f3672a24
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_10"
+      rect:
+        serializedVersion: 2
+        x: 4077
+        y: 207
+        width: 362
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1242648006161744b3f447c5bf146c2
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_11"
+      rect:
+        serializedVersion: 2
+        x: 4518
+        y: 222
+        width: 323
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf212753fd26bc44a19e05e6c929c6b
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_12"
+      rect:
+        serializedVersion: 2
+        x: 4986
+        y: 187
+        width: 209
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4019228ff86867044a58463704d68270
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_13"
+      rect:
+        serializedVersion: 2
+        x: 5005
+        y: 181
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cea724a651e91a49b901542c5b573d1
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_14"
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 185
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db54daee3a52a664897e2d7879d70c05
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_15"
+      rect:
+        serializedVersion: 2
+        x: 5083
+        y: 184
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2ac94a13fef344a9e2f7587ed76bfd
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "soft and wet attack 2 - text 2.0 spritelist  \u043A\u043E\u043F\u0438\u044F_16"
+      rect:
+        serializedVersion: 2
+        x: 5049
+        y: 161
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e06ad3421f2fd41abf000efad53da2
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4b9a3dc7f18109447bebd95e5e089e58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

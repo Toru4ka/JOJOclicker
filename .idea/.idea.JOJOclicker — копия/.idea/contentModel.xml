@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\JOJOclicker" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ability.cs" t="Include" />
+        <e p="AbilityCoolDown.cs" t="Include" />
+        <e p="AbilityDisplay.cs" t="Include" />
+        <e p="ConvertHelper.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="abilites" t="Include">
+            <e p="DD.cs" t="Include" />
+            <e p="TimeStop.cs" t="Include" />
+          </e>
+          <e p="ability.cs" t="Include" />
+          <e p="AudioHelper.cs" t="Include" />
+          <e p="BulletHelper.cs" t="Include" />
+          <e p="CameraConstantWidth.cs" t="Include" />
+          <e p="Cooldown.cs" t="Include" />
+          <e p="DataHolder.cs" t="Include" />
+          <e p="GameHelper.cs" t="Include" />
+          <e p="GHTEST.cs" t="Include" />
+          <e p="HealthHelper.cs" t="Include" />
+          <e p="HeroHelper.cs" t="Include" />
+          <e p="HitHelper.cs" t="Include" />
+          <e p="Melee.cs" t="Include" />
+          <e p="MenuHelper.cs" t="Include" />
+          <e p="PlayerHelper.cs" t="Include" />
+          <e p="SC.cs" t="Include" />
+          <e p="SceneLoading.cs" t="Include" />
+          <e p="Skills.cs" t="Include" />
+          <e p="SMHelper.cs" t="Include" />
+          <e p="StoreHelper.cs" t="Include" />
+          <e p="test.cs" t="Include" />
+          <e p="TimeStopSkill.cs" t="Include" />
+          <e p="UpButton.cs" t="Include" />
+          <e p="UpButtonHelper.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="$dd_Invert.shader" t="Include" />
+          <e p="BAW.shader" t="Include" />
+        </e>
+      </e>
+      <e p="JOJOclicker — копия.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\ilyam\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ilyam\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_JOJOclicker — копия.238263445.00" t="ExcludeRecursive" />
+  </component>
+</project>
