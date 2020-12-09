@@ -27,7 +27,7 @@ public class ConvertHelper : MonoBehaviour
         }
     }
 
-    public string GetCurrencyIntoString(float valueToConvert)
+    public string GetCurrencyIntoString(double valueToConvert)
     {
         if (valueToConvert >= 1000000000000f) // trillion
         {

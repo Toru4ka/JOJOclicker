@@ -7,6 +7,10 @@ using UnityEngine.Advertisements;
 
 public class GameHelper : MonoBehaviour
 {
+    public GameObject BG;
+    public int CurrentBg;
+    public Sprite[] backGrounds;
+    public GameObject BgTranzition;
     HealthHelper _healthHelper;
     public Text BEPText;
     const int Freeq = 3;
@@ -17,8 +21,8 @@ public class GameHelper : MonoBehaviour
     public Transform StartPosition;
     public GameObject BEPPrefab;
     public GameObject[] EnemysPrefabs;
-    public float PlayerBEP;
-    public int PlayerCoin;
+    public double PlayerBEP;
+    public double PlayerCoin;
     public int PlayerDamage = 10;
     public GameObject[] target_2;
     public Text CoinText;
@@ -30,6 +34,7 @@ public class GameHelper : MonoBehaviour
     public Text BossTimerText;
     public float BossTimerTime;
 
+
     string GameIDPlayMarket = "3790483";
     string GameIDAppStore = "3790483";
     string VideoAdvertisements = "video";
@@ -37,13 +42,7 @@ public class GameHelper : MonoBehaviour
 
     private void Start()
     {
-
-
         Advertisement.Initialize(GameIDPlayMarket, false);
-
-
-
-
         /*if (PlayerPrefs.HasKey("SV"))
         {
             PlayerCoin = PlayerPrefs.GetInt("COIN_SV");
@@ -57,7 +56,6 @@ public class GameHelper : MonoBehaviour
             }
 
         }*/
-
     }
 
 
@@ -68,6 +66,22 @@ public class GameHelper : MonoBehaviour
         //DamageText.text = PlayerDamage.ToString();
         DamageText.text = ConvertHelper.Instance.GetCurrencyIntoString(PlayerDamage);
         CoinText.text = PlayerCoin.ToString();
+        _healthHelper = FindObjectOfType<HealthHelper>();
+
+        if (_healthHelper.Part3 == true && !(CurrentBg == 0))
+        {
+            GameObject BgObj = Instantiate(BgTranzition) as GameObject;
+            BG.GetComponent<SpriteRenderer>().sprite = backGrounds[0];
+            CurrentBg = 0;
+            Destroy(BgObj, 1f);
+        }
+        else if (_healthHelper.Part4 == true && !(CurrentBg == 1))
+        {
+            GameObject BgObj = Instantiate(BgTranzition) as GameObject;
+            BG.GetComponent<SpriteRenderer>().sprite = backGrounds[1];
+            CurrentBg = 1;
+            Destroy(BgObj, 1f);
+        }
     }
 
     public void TakeCoin(int Coin)
@@ -88,18 +102,18 @@ public class GameHelper : MonoBehaviour
     }
 
 
-
     public void SpawnEnemy()
     {
         float TempCount = _count;
-        if ((TempCount % 50)==0)
+        if ((TempCount % 50) == 0)
         {
             if (Advertisement.IsReady())
             {
                 Advertisement.Show();
             }
         }
-            _count++;
+
+        _count++;
 
         int randomMaxValue = _count / Freeq + 1;
 
@@ -109,11 +123,5 @@ public class GameHelper : MonoBehaviour
         //PlayerPrefs.SetInt("index_SV", index);
         GameObject ememyObj = Instantiate(EnemysPrefabs[index]) as GameObject;
         ememyObj.transform.position = StartPosition.position;
-
-
     }
-
-
-
-
 }

@@ -10,14 +10,20 @@ public class HealthHelper : MonoBehaviour
     public int Health = 100;
     public int BEP = 90;
     public bool IS_Boss;
+    public bool Part3;
+    public bool Part4;
+    public bool IS_Boss_Part4;
     bool _isdead;
     bool once = false;
     GameHelper _gameHealper;
+    private MiniGame _miniGame;
     public GameObject DeathEffect;
     bool oncefortimer = false;
+    [SerializeField]private GameObject BlackHole;
 
     void Start()
     {
+        _miniGame = GameObject.FindObjectOfType<MiniGame>();
         _gameHealper = GameObject.FindObjectOfType<GameHelper>();
         int count = _gameHealper._count;
         MaxHealth = System.Convert.ToInt32(MaxHealth * (count * 0.55));
@@ -37,6 +43,7 @@ public class HealthHelper : MonoBehaviour
             StartCoroutine(Stage1());
         }
         _gameHealper.HealthSlider.value = Health;
+        
     }
 
     public void GetHit(int damage)
@@ -52,6 +59,11 @@ public class HealthHelper : MonoBehaviour
             {
                 _gameHealper.BossTimer.SetActive(false);
                 _gameHealper.BossTimerTime = 15;
+            }
+
+            if (IS_Boss_Part4 == true)
+            {
+                _miniGame.once = false;
             }
             int random = UnityEngine.Random.Range(0, 100);
             if (random < CoinChanse)
@@ -138,5 +150,16 @@ public class HealthHelper : MonoBehaviour
         _gameHealper.BossTimerTime = 15;
 
     }
+
+    public void KillerQueenMiniGameLose()
+    {
+        GameObject BlackHoleObj = Instantiate(BlackHole) as GameObject;
+        Destroy(BlackHoleObj, 3.2f);
+        Destroy(gameObject);
+        _gameHealper.SpawnEnemy();
+        _miniGame.once = false;
+    }
+    
+    
     
 }

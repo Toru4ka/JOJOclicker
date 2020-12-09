@@ -28,11 +28,8 @@ public class TimeStop : MonoBehaviour
         _abilityDisplay = _abilitesDisplays[1];
     }
 
-
     public void Update()
     {
-        
-        
         if (_abilityDisplay.KD_Image.enabled == false && _abilityDisplay.ability.TimeOfBonus == 0)
         {
             _abilityDisplay.Ability_Button.interactable = true;
@@ -60,22 +57,26 @@ public class TimeStop : MonoBehaviour
                 TimeGo();    
             }
         }
-
+        
 
     }
 
     public void TimeStop1()
     {
+        
         GameObject TimeStopEffect = Instantiate(TimeStopEffectPrefab) as GameObject;
         BG.GetComponent<Renderer>().material = BAWmaterial;
         _abilityDisplay.Ability_Button.interactable = false;
         Destroy(TimeStopEffect, 8);
-        BTP = StartCoroutine(BossTimerPause());
         GameObject enemyStand = GameObject.FindWithTag("enemy");
         Animator enemyStandAnimator = enemyStand.GetComponent<Animator>();
         enemyStandAnimator.enabled = false;
-        AudioSource enemyStandAudioSource = enemyStand.GetComponent<AudioSource>();
-        enemyStandAudioSource.Stop();
+        if (_healthHelper.IS_Boss)
+        {
+            AudioSource enemyStandAudioSource = enemyStand.GetComponent<AudioSource>();
+            enemyStandAudioSource.Stop();
+        }
+        BTP = StartCoroutine(BossTimerPause());
     }
 
     public void TimeGo()
@@ -83,12 +84,16 @@ public class TimeStop : MonoBehaviour
         GameObject TimeStartEffect = Instantiate(TimeStartEffectPrefab) as GameObject;
         BG.GetComponent<Renderer>().material = DS;
         Destroy(TimeStartEffect, 3);
-        StopCoroutine(BTP);
         GameObject enemyStand = GameObject.FindWithTag("enemy");
+        _healthHelper = enemyStand.GetComponent<HealthHelper>();
         Animator enemyStandAnimator = enemyStand.GetComponent<Animator>();
         enemyStandAnimator.enabled = true;
-        AudioSource enemyStandAudioSource = enemyStand.GetComponent<AudioSource>();
-        enemyStandAudioSource.Play();
+        if (_healthHelper.IS_Boss)
+        {
+            AudioSource enemyStandAudioSource = enemyStand.GetComponent<AudioSource>();
+            enemyStandAudioSource.Play();
+        }
+        StopCoroutine(BTP);
     }
     public IEnumerator BossTimerPause()
     {
@@ -97,6 +102,10 @@ public class TimeStop : MonoBehaviour
             float tempTime = _gameHealper.BossTimerTime;
             _gameHealper.BossTimerTime += 1;
             
+            GameObject enemyStand = GameObject.FindGameObjectWithTag("enemy");
+            Animator enemyStandAnimator = enemyStand.GetComponent<Animator>();
+            enemyStandAnimator.enabled = false;
+
             if (_gameHealper.BossTimerTime < 10)
             {
                 _gameHealper.BossTimerText.text = _gameHealper.BossTimerTime.ToString(tempTime.ToString("0"));

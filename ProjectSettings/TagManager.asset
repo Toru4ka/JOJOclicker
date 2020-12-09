@@ -10,6 +10,7 @@ TagManager:
   - Time stop
   - TimerPosition
   - BossTimerText
+  - PanelMinigameKQ
   layers:
   - Default
   - TransparentFX

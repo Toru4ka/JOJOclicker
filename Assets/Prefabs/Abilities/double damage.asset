@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: double damage
   m_EditorClassIdentifier: 
   name: 'double damage '
-  ability_sprite: {fileID: 21300000, guid: 33a867dc083c80a4c8e2a282cc34a04a, type: 3}
+  ability_sprite: {fileID: 21300000, guid: 4762e3e1923c9ec45a0641b4979a8d69, type: 3}
   attack: 2
   kdImage: {fileID: 21300000, guid: 6dde059937186fb4f81971fef10b19e5, type: 3}
   cooldown: 10

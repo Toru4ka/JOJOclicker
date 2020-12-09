@@ -7,7 +7,7 @@ public class HitHelper : MonoBehaviour
     GameHelper _gameHealper;
     PlayerHelper _playerHelper;
     StoreHelper _storeHelper;
-
+    public bool nohit = false;
 
 
     void Start()
@@ -27,8 +27,16 @@ public class HitHelper : MonoBehaviour
     void OnMouseDown()
     {
         if (_storeHelper.netydarov == true) return;
-        GetComponent<HealthHelper>().GetHit(_gameHealper.PlayerDamage);
-        _playerHelper.RunAttack();
+        if (nohit == true)
+        {
+            return;
+        }
+        else
+        {
+            GetComponent<HealthHelper>().GetHit(_gameHealper.PlayerDamage);
+            _playerHelper.RunAttack();
+        }
+        
     }
 
 }
