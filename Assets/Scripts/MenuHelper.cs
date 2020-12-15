@@ -23,20 +23,26 @@ public class MenuHelper : MonoBehaviour {
         PanelAbout.SetActive(false);
     }
 
-    public void openPanelAbout()
-    {
-        PanelAbout.SetActive(true);
-    }
-
-
     public void ExitGame()
     {
         Application.Quit();
     }
-
-    public void LoadGame()
+    
+    public void OpenClouse(GameObject Panel)
     {
+        if(Panel.activeSelf == false)
+        {
+            Panel.SetActive(true);
+        }
+        else
+        {
+            Panel.SetActive(false);
+        }
+    }
 
+    public void GoByURL(string urladdress)
+    {
+        Application.OpenURL(urladdress);
     }
 
     

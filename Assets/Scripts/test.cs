@@ -64,7 +64,14 @@ public class test : MonoBehaviour
         {
             if (ShopItems[i].owner > 7)
             {
-                UpGradesList[i + 1].SetActive(true);
+                if (i+1 < UpGradesList.Length)
+                {
+                    UpGradesList[i + 1].SetActive(true);
+                }
+                else
+                {
+                    return;
+                }
             }
         }
     }

@@ -11,6 +11,7 @@ TagManager:
   - TimerPosition
   - BossTimerText
   - PanelMinigameKQ
+  - double damage Star Platinum 4
   layers:
   - Default
   - TransparentFX

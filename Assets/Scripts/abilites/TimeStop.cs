@@ -14,7 +14,7 @@ public class TimeStop : MonoBehaviour
     public GameObject BG;
     public Material BAWmaterial;
     public Material DS;
-
+    public GameObject CurrentAbilityl;
     private Coroutine BTP;
 
     bool offBossTimerPause = false;
@@ -24,8 +24,8 @@ public class TimeStop : MonoBehaviour
     {
         _gameHealper = GameObject.FindObjectOfType<GameHelper>();
         _healthHelper = GameObject.FindObjectOfType<HealthHelper>();
-        _abilitesDisplays = GameObject.FindObjectsOfType<AbilityDisplay>();
-        _abilityDisplay = _abilitesDisplays[1];
+        //_abilitesDisplays = GameObject.FindObjectsOfType<AbilityDisplay>();
+        _abilityDisplay = CurrentAbilityl.GetComponent<AbilityDisplay>();
     }
 
     public void Update()
@@ -35,7 +35,7 @@ public class TimeStop : MonoBehaviour
             _abilityDisplay.Ability_Button.interactable = true;
             _abilityDisplay.ability.TimeOfBonus = _abilityDisplay.ability.BonusTime;
         }
-
+        
         if (_abilityDisplay.KD_Image.enabled == true && _abilityDisplay.ability.TimeOfBonus > 0)
         {
             if (_abilityDisplay.ability.TimeOfBonus > 0)
@@ -63,7 +63,6 @@ public class TimeStop : MonoBehaviour
 
     public void TimeStop1()
     {
-        
         GameObject TimeStopEffect = Instantiate(TimeStopEffectPrefab) as GameObject;
         BG.GetComponent<Renderer>().material = BAWmaterial;
         _abilityDisplay.Ability_Button.interactable = false;

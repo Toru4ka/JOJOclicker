@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2929827fc1e93940b784be282191f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinChanse: 0
+  CoinChanse: 60
   MaxHealth: 100
   Health: 100
   BEP: 100

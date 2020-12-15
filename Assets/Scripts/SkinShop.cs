@@ -18,6 +18,8 @@ public class SkinShop : MonoBehaviour
     [Header("Предметы магазина скинов")] public List<SkinItem> ShopSkinItems = new List<SkinItem>();
     [Header("Текст цен кнопок скинов")] public Text[] SkinPriseText;
     [Header("Кнопки магазина скинов")] public Button[] SkinshopButt;
+    [Header("Ысе скилы скинов")]
+    public GameObject[] AllSkills;
 
     [HideInInspector] public Save svSkins = new Save();
 
@@ -86,23 +88,31 @@ public class SkinShop : MonoBehaviour
     {
         for (int i = 0; i < ShopSkinItems.Count; i++)
         {
-            if (i == CurrentSkinIndex && ShopSkinItems[i].Is_Have == true)
+            if (i == CurrentSkinIndex && ShopSkinItems[i].Is_Have == true) //Select Skin 
             {
                 SkinPriseText[i].text = "Select";
                 overrider.SetAnimations(overrideControllers[i]);
                 CurrentBattleCry = ShopSkinItems[i].BattelCry;
                 _playerHelper = FindObjectOfType<PlayerHelper>();
                 _playerHelper.SetCurrentBattleCry(ShopSkinItems[i].BattelCry);
+                for (int j = 0; j < ShopSkinItems[i].SkinSkills.Length; j++)
+                {
+                    ShopSkinItems[i].SkinSkills[j].gameObject.SetActive(true);
+                }
             }
             else
             {
-                if (ShopSkinItems[i].Is_Have == false)
+                if (ShopSkinItems[i].Is_Have == false) //Bye Skin or Change prise text
                 {
                     SkinPriseText[i].text = ShopSkinItems[i].coast.ToString() + " Coin";
                 }
                 else
                 {
                     SkinPriseText[i].text = "";
+                    for (int j = 0; j < ShopSkinItems[i].SkinSkills.Length; j++)
+                    {
+                        ShopSkinItems[i].SkinSkills[j].gameObject.SetActive(false);
+                    }
                 }
             }
         }
@@ -116,6 +126,7 @@ public class SkinShop : MonoBehaviour
         public bool Is_Have;
         public int SkinIndex;
         public AudioClip BattelCry;
+        public GameObject[] SkinSkills;
     }
 
     public class Save
