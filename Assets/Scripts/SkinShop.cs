@@ -23,6 +23,7 @@ public class SkinShop : MonoBehaviour
     public GameObject[] AllSkills;
 
     [HideInInspector] public Save svSkins = new Save();
+    [HideInInspector] public SaveOld svSkinsOld = new SaveOld();
 
     public void Awake()
     {
@@ -36,6 +37,14 @@ public class SkinShop : MonoBehaviour
             for (int i = 0; i < ShopSkinItems.Count; i++)
             {
                 ShopSkinItems[i].Is_Have = svSkins.Is_Have[i];
+            }
+        }
+        if (PlayerPrefs.HasKey("SV"))
+        {
+            svSkinsOld = JsonUtility.FromJson<SaveOld>(PlayerPrefs.GetString("SV"));
+            if (svSkinsOld.HS1 == true)
+            {
+                ShopSkinItems[1].Is_Have = true;
             }
         }
     }
@@ -168,5 +177,12 @@ public class SkinShop : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveFuc();
+    }
+    
+    public class SaveOld
+    {
+        public bool HS0;
+        public bool HS1;
+        public bool HS2;
     }
 }
