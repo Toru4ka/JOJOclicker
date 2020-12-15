@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using MonoBehaviours;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UI;
 
 public class SkinShop : MonoBehaviour
