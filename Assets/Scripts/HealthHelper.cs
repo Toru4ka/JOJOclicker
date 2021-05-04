@@ -59,11 +59,13 @@ public class HealthHelper : MonoBehaviour
             {
                 _gameHealper.BossTimer.SetActive(false);
                 _gameHealper.BossTimerTime = 15;
+                _gameHealper._countDefeatedBosses++;
             }
 
             if (IS_Boss_Part4 == true)
             {
                 _miniGame.once = false;
+                _gameHealper._countDefeatedBosses++;
             }
             int random = UnityEngine.Random.Range(0, 100);
             if (random < CoinChanse)

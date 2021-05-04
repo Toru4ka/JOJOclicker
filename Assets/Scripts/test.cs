@@ -40,13 +40,14 @@ public class test : MonoBehaviour
     public bool HS2 = false;
 
 
-    public void Awake()
+    public void Awake() // Load
     {
         _healthHelper = GameObject.FindObjectOfType<HealthHelper>();
         _gameHealper = GameObject.FindObjectOfType<GameHelper>();
         _heroHelper = GameObject.FindObjectOfType<HeroHelper>();
         _playerHelper = GameObject.FindObjectOfType<PlayerHelper>();
         sMHelper = GameObject.FindObjectOfType<SMHelper>();
+        
         if (PlayerPrefs.HasKey("SV"))
         {
             sv = JsonUtility.FromJson<Save>(PlayerPrefs.GetString("SV"));
@@ -95,8 +96,11 @@ public class test : MonoBehaviour
 
             _gameHealper.PlayerDamage = sv.damage;
             _gameHealper.PlayerBEP = sv.BEP;
+            _gameHealper.recordPlayerBEP = sv.recordBPE;
+            _gameHealper.recordPlayerCoin = sv.recordCoin;
             _gameHealper.PlayerCoin = sv.Coin;
             _gameHealper._count = sv._count;
+            _gameHealper._countDefeatedBosses = sv._countDefeatedBosses;
             _gameHealper.index = sv.index;
             GlobalSkinIndex = sv.SkinIndex;
             HS0 = sv.HS0;
@@ -148,6 +152,8 @@ public class test : MonoBehaviour
         }
         else
         {
+            _gameHealper = GameObject.FindObjectOfType<GameHelper>();
+            _gameHealper.SpawnEnemy();
             if (PlayerPrefs.HasKey("SVMS"))
             {
                 sv = JsonUtility.FromJson<Save>(PlayerPrefs.GetString("SVMS"));
@@ -155,9 +161,7 @@ public class test : MonoBehaviour
                 sMHelper.SliderSounds.value = sv.SoundVolume;
                 sMHelper.SliderMusic.value = sv.MusicVolume;
             }
-
             _gameHealper.PlayerDamage = Damage;
-            _gameHealper.SpawnEnemy();
             for (int i = 0; i < ShopItems.Count; i++)
             {
                 ShopItems[i].coast = ShopItems[i].basecoast;
@@ -221,7 +225,8 @@ public class test : MonoBehaviour
 
     private void OnApplicationQuit() //Save
     {
-        sv.lvl_owner = new int[ShopItems.Count];
+        SaveFuc();
+        /*sv.lvl_owner = new int[ShopItems.Count];
         sv.sv_coast = new Double[ShopItems.Count];
         for (int i = 0; i < ShopItems.Count; i++)
         {
@@ -242,7 +247,7 @@ public class test : MonoBehaviour
         sv.MusicVolume = sMHelper.SliderMusic.value;
 
         PlayerPrefs.SetString("SV", JsonUtility.ToJson(sv));
-        PlayerPrefs.Save();
+        PlayerPrefs.Save();*/
     }
 
     public void Buttonclikc(int index)
@@ -405,8 +410,11 @@ public class test : MonoBehaviour
         public float multiplier;
         public int damage;
         public double BEP;
+        public double recordBPE;
         public double Coin;
+        public double recordCoin;
         public int _count;
+        public int _countDefeatedBosses;
         public int index;
         public int SkinIndex;
         public bool HS0;
@@ -464,8 +472,11 @@ public class test : MonoBehaviour
         sv.multiplier = 1.15f;
         sv.damage = _gameHealper.PlayerDamage;
         sv.BEP = _gameHealper.PlayerBEP;
+        sv.recordBPE = _gameHealper.recordPlayerBEP;
         sv.Coin = _gameHealper.PlayerCoin;
+        sv.recordCoin = _gameHealper.recordPlayerCoin;
         sv._count = _gameHealper._count;
+        sv._countDefeatedBosses = _gameHealper._countDefeatedBosses;
         sv.index = _gameHealper.index;
         sv.SkinIndex = GlobalSkinIndex;
         sv.HS0 = HS0;

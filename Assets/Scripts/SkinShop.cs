@@ -19,7 +19,7 @@ public class SkinShop : MonoBehaviour
     [Header("Предметы магазина скинов")] public List<SkinItem> ShopSkinItems = new List<SkinItem>();
     [Header("Текст цен кнопок скинов")] public Text[] SkinPriseText;
     [Header("Кнопки магазина скинов")] public Button[] SkinshopButt;
-    [Header("Ысе скилы скинов")]
+    [Header("Все скилы скинов")]
     public GameObject[] AllSkills;
 
     [HideInInspector] public Save svSkins = new Save();

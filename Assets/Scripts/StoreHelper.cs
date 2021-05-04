@@ -12,9 +12,11 @@ public class StoreHelper : MonoBehaviour
     public GameObject miniMenu;
     public GameObject ButtonUpgrades;
     public GameObject ButtonSkins;
+    
     public GameObject UpgradesContent;
     public GameObject SkinsContent;
 
+    public GameObject panelStatistic;
     public GameObject PanelStore;
     public GameObject ButtonSettings;
     public GameObject ButtonSettingInSettings;
@@ -23,6 +25,7 @@ public class StoreHelper : MonoBehaviour
     public GameObject ButtonArowSettings;
 
     public GameObject BG;
+    
     public void Start()
     {
         BG.SetActive(false);
@@ -37,6 +40,7 @@ public class StoreHelper : MonoBehaviour
         Buttun1.SetActive(false);
         Buttun2.SetActive(true);
         ActionBar.SetActive(false);
+        panelStatistic.SetActive(false);
     }
 
     public void _ButtonStoreMinus()
@@ -46,6 +50,7 @@ public class StoreHelper : MonoBehaviour
         Buttun2.SetActive(false);
         Buttun1.SetActive(true);
         ActionBar.SetActive(true);
+        panelStatistic.SetActive(false);
     }
 
     public void PauseOn()
@@ -90,6 +95,12 @@ public class StoreHelper : MonoBehaviour
     public void ButtonSkinsClick()
     {
         SkinsContent.SetActive(true);
+        miniMenu.SetActive(false);
+    }
+
+    public void ButtonStatistics()
+    {
+        panelStatistic.SetActive(true);
         miniMenu.SetActive(false);
     }
 }

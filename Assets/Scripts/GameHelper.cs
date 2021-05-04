@@ -22,11 +22,14 @@ public class GameHelper : MonoBehaviour
     public GameObject BEPPrefab;
     public GameObject[] EnemysPrefabs;
     public double PlayerBEP;
+    public double recordPlayerBEP;
     public double PlayerCoin;
+    public double recordPlayerCoin;
     public int PlayerDamage = 10;
     public GameObject[] target_2;
     public Text CoinText;
     public int _count;
+    public int _countDefeatedBosses;
     public int index;
     Vector3Int Position;
 
@@ -62,6 +65,7 @@ public class GameHelper : MonoBehaviour
     private void Update()
     {
         //BEPText.text = PlayerBEP.ToString();
+        
         BEPText.text = ConvertHelper.Instance.GetCurrencyIntoString(PlayerBEP);
         //DamageText.text = PlayerDamage.ToString();
         DamageText.text = ConvertHelper.Instance.GetCurrencyIntoString(PlayerDamage);
@@ -87,6 +91,11 @@ public class GameHelper : MonoBehaviour
     public void TakeCoin(int Coin)
     {
         PlayerCoin += Coin;
+        if (recordPlayerCoin < PlayerCoin)
+        {
+            recordPlayerCoin = PlayerCoin;
+        }
+        
         //PlayerPrefs.SetInt("COIN_SV", PlayerCoin);
         GameObject CoinObj = Instantiate(CoinPrefab) as GameObject;
         Destroy(CoinObj, 3);
@@ -95,6 +104,10 @@ public class GameHelper : MonoBehaviour
     public void TakeBEP(int BEP)
     {
         PlayerBEP += System.Convert.ToInt32(BEP * (_count * 0.25));
+        if (recordPlayerBEP < PlayerBEP)
+        {
+            recordPlayerBEP = PlayerBEP; 
+        }
         //PlayerPrefs.SetInt("BEP_SV", PlayerBEP);
         GameObject BEPObj = Instantiate(BEPPrefab) as GameObject;
         Destroy(BEPObj, 1);
@@ -105,6 +118,7 @@ public class GameHelper : MonoBehaviour
     public void SpawnEnemy()
     {
         float TempCount = _count;
+        
         if ((TempCount % 50) == 0)
         {
             if (Advertisement.IsReady())
@@ -112,16 +126,15 @@ public class GameHelper : MonoBehaviour
                 Advertisement.Show();
             }
         }
-
         _count++;
-
         int randomMaxValue = _count / Freeq + 1;
-
-        if (randomMaxValue >= EnemysPrefabs.Length)
-            randomMaxValue = EnemysPrefabs.Length;
+        if (randomMaxValue >= EnemysPrefabs.Length) randomMaxValue = EnemysPrefabs.Length;
         index = UnityEngine.Random.Range(0, randomMaxValue);
         //PlayerPrefs.SetInt("index_SV", index);
         GameObject ememyObj = Instantiate(EnemysPrefabs[index]) as GameObject;
         ememyObj.transform.position = StartPosition.position;
+        
+        
+        
     }
 }
