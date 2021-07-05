@@ -250,7 +250,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: jojo.keystore'
+  AndroidKeystoreName: F:/jojo.keystore
   AndroidKeyaliasName: jojo
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 1
